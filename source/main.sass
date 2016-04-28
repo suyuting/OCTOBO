@@ -1,0 +1,372 @@
+$menu-bg-color: #2d3e50
+$menu-color: #333333
+$menu-text-color: #fff
+$main-text-color: #fff
+$blurb-bg-color: #3dc3d4
+$team-bg-color: #3dc3d4
+
+@mixin transform($transforms)
+  -moz-transform: $transforms
+  -o-transform: $transforms
+  -ms-transform: $transforms
+  -webkit-transform: $transforms
+  transform: $transforms
+
+@mixin transition($transitions)
+  -moz-transition: $transitions
+  -o-transition: $transitions
+  -ms-transition: $transitions
+  -webkit-transition: $transitions
+  transition: $transitions
+
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+// -- BASE STYLES --
+
+body
+  line-height: 1.7em
+  font-size: 13px
+
+// .pure-img-responsive
+//   max-width: 100%
+//   height: auto
+.pure-img
+  width: 100%
+
+// When setting the primary font stack, apply it to the Pure grid units along
+// with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+// specific font stacks to ensure the greatest OS/browser compatibility.
+html, button, input, select, textarea, .pure-g [class *= "pure-u"]
+  // /* Set your content font stack here: */
+  // font-family: Georgia, Times, "Times New Roman", serif
+
+// -------------------
+// MENU ------------------
+
+.octobo-menu
+  padding: 0.5em
+  text-align: center
+  box-shadow: 0 1px 1px rgba(0,0,0, 0.10)
+
+.octobo-menu
+  background-color: $menu-bg-color
+  box-shadow: 0 0 5px #1F1F1F
+
+.pure-menu.pure-menu-fixed
+  /* Fixed menus normally have a border at the bottom. */
+  border-bottom: none
+  /* I need a higher z-index here because of the scroll-over effect. */
+  z-index: 4
+
+.octobo-menu .pure-menu-heading
+  color: white
+  font-weight: 400
+  font-size: 120%
+
+.octobo-menu .pure-menu-selected a
+  color: white
+
+.octobo-menu a
+  color: #6FBEF3
+
+.octobo-menu li a:hover, .octobo-menu li a:focus
+  background: none
+  border: none
+  color: #AECFE5
+
+// -----------------------
+// -------------------
+
+
+// -------------------
+// SPLASH ----------------
+
+.octobo-hero
+  background: url(images/hero.jpg)
+  background-position: top
+  background-size: cover
+  height: 25rem
+
+.octobo-hero-overlay
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.3)
+
+.octobo-about
+  padding-top: 5rem
+  text-align: center
+  color: $main-text-color
+  font-size: 1.5rem
+
+.octobo-about h1
+  margin: 0
+  padding-top: 2rem
+
+.octobo-about p
+  font-size: 1.3rem
+
+.octobo-signup
+  color: #000
+
+.octobo-signup input.email
+  display: inline-block
+
+.octobo-signup fieldset
+  max-width: 38rem
+  margin: auto
+
+.octobo-signup-item input
+  margin: 0.5rem auto
+
+// -----------------------
+// -------------------
+
+// -------------------
+// TEAM ------------------
+
+.team-container
+  padding: 1rem 0
+  background-color: $team-bg-color
+  color: #fff
+
+.team-container h2
+  text-align: center
+
+.team-row, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video
+  max-width: 70rem
+  margin: auto
+
+.team-person
+  display: block
+  padding: 2rem
+  letter-spacing: initial
+  text-align: center
+
+.team-person img
+  border-radius: 50%
+
+a.team-person
+  text-decoration: none
+  @include transition(opacity 0.4s)
+
+a.team-person:hover
+  text-decoration: none
+  opacity: 0.5
+
+.team-person h3
+  margin: 0
+
+.team-person-description
+  padding: 0
+  color: #fff
+
+.team-person ul
+  margin: 0
+  padding: 0
+
+.team-person li
+  list-style: none
+  line-height: 1em
+
+// -----------------------
+// -------------------
+
+// -------------------
+// EVENT ------------------
+
+.rounded-icon
+  border-radius: 12px
+
+.event-wrapper
+  background-color: #fff
+
+.octobo-event
+  max-width: 40rem
+  height: 12rem
+  padding: 1rem
+  margin: auto
+  display: table
+
+.octobo-event a, .octobo-event p
+  display: table-cell
+  vertical-align: middle
+
+
+a.octobo-event
+  text-decoration: none
+  color: #000
+
+a.octobo-event:hover
+  opacity: 0.5
+
+.octobo-event img
+  margin-top: 2.5rem
+  width: 5rem
+  float: left
+  margin-right: 1rem
+
+// -----------------------
+// -------------------
+
+// -------------------
+// BLURB ------------------
+
+.octobo-feature-block
+  height: 27rem
+
+.octobo-feature-image
+  background: no-repeat center right url(images/features-intro.jpg)
+  background-size: cover
+
+.octobo-feature-blurb-wrapper
+  background-color: #3dc3d4
+  color: #fff
+  padding: 3rem
+  display: flex
+  align-items: center
+
+.octobo-feature-blurb
+  max-width: 35rem
+
+.octobo-feature-blurb h2
+  margin: 0
+
+// -----------------------
+// -------------------
+
+// -------------------
+// MEET OCTOBO -----------
+
+.meet-octobo
+  margin-top: 1rem
+
+.meet-octobo h2
+  text-align: center
+
+.octobo-callout
+  padding: 3rem
+
+// -----------------------
+// -------------------
+
+// -------------------
+// QUOTES ----------------
+.octobo-quotes-wrapper
+  background-color: #f266bc
+
+.octobo-quote
+  font-size: 1.5rem
+
+.octobo-quote a
+  text-decoration: none
+  color: #fff
+  line-height: 1.2em
+
+.octobo-quote cite::before
+  content: '\2014 \00A0'
+// -----------------------
+// -------------------
+
+
+// -------------------
+// CONTACT/PRESS -----------
+
+.octobo-contact-container
+  background-color: #fff
+
+.octobo-contact-container h2
+  text-align: center
+
+.contact-options
+  margin: auto
+  display: block
+  max-width: 20rem
+  text-align: center
+  height: 10rem
+
+.contact-item
+  display: block
+
+.contact-item
+  padding: 0.5rem
+
+a.octobo-email
+  text-decoration: none
+  color: #000
+  font-size: 1.5em
+
+.octobo-presskit
+  background-color: #000
+  color: #fff
+
+// -----------------------
+// -------------------
+
+// -------------------
+// VIDEO ----------------
+
+.video-wrapper
+  position: relative
+  padding-bottom: 56.25% /* 16:9 */
+  padding-top: 25px
+  height: 0
+  margin: auto
+
+.video-wrapper iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.octobo-video-wrapper
+  background-color: #000
+
+// ----------------------
+// -------------------
+
+
+
+
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em)
+
+  /* We increase the body font size */
+  body
+    font-size: 16px
+  /* We want to give the content area some more padding */
+  // .content
+  //   padding: 1em
+
+  /* We can align the menu header to the left, but float the menu items to the right. */
+  .octobo-menu
+    text-align: left
+
+  .octobo-menu ul
+    float: right
+
+  .octobo-hero
+    height: 40rem
+
+  .octobo-about
+    padding-top: 20rem
+
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to override some
+ * of the mobile and tablet styles.
+ */
+// @media (min-width: 78em)
+//   // We increase the header font size even more
+//   .splash-head
+//     font-size: 300%

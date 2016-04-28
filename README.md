@@ -1,2 +1,0 @@
-# OCTOBO
-Website for OCTOBO
