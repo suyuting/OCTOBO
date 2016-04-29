@@ -7,6 +7,11 @@
 - team.push( { image: 7, name: "Justin Bortnick", site: "mailto:shademan.exe@gmail.com", roles: ["Writer"] } )
 - team.push( { image: 8, name: "Vivian Lin", site: "mailto:vnlin@hotmail.com", roles: ["Crafting Consultant"] } )
 
+mixin botProtection()
+  div(style="position: absolute; left: -5000px;", aria-hidden="true")
+    input.pure-u-1(type="text", name="b_73a85c8d2b11a53ff2b6a691a_906254525e", tabindex="-1", value="")
+
+
 doctype html
 html(lang="en")
   head
@@ -64,9 +69,7 @@ html(lang="en")
               fieldset
                 .octobo-signup-item
                   input.octobo-signup-item-email(type="email", value="", name="EMAIL", placeholder="me@email.com", required)
-                  //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                div(style="position: absolute; left: -5000px;", aria-hidden="true")
-                    input.pure-u-1(type="text", name="b_73a85c8d2b11a53ff2b6a691a_906254525e", tabindex="-1", value="")
+                +botProtection()
                 .octobo-signup-item
                   input.pure-button.pure-button-primary(type="submit", value="Keep me updated!", name="subscribe", id="mc-embedded-subscribe")
 
