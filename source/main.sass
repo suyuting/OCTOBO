@@ -211,15 +211,19 @@ a.team-person:hover
   background-color: #fff
 
 .octobo-event
-  max-width: 40rem
   height: 18rem
   padding: 1rem
   margin: auto
   display: table
 
 .octobo-event a, .octobo-event p
-  display: table-cell
-  vertical-align: middle
+  // display: table-cell
+  // vertical-align: middle
+  display: block
+  margin: auto
+
+// .octobo-event p
+//   display: block
 
 
 a.octobo-event
@@ -232,8 +236,8 @@ a.octobo-event:hover
 .octobo-event img
   margin-top: 4.5rem
   width: 7rem
-  float: left
-  margin-right: 1rem
+  margin: 1rem auto
+  display: block
 
 // -----------------------
 // -------------------
@@ -387,12 +391,6 @@ a.octobo-email
   // body
   //   font-size: 16px
 
-
-
-  /* We want to give the content area some more padding */
-  // .content
-  //   padding: 1em
-
   /* We can align the menu header to the left, but float the menu items to the right. */
   .octobo-menu
     text-align: left
@@ -407,6 +405,17 @@ a.octobo-email
   .octobo-hero
     height: 40rem
 
+
+
+  // Make the alt.ctrl thing centered and put the text next to it
+  .octobo-event a, .octobo-event p
+    display: table-cell
+    vertical-align: middle
+
+  .octobo-event img
+    margin-top: 4rem
+    margin-right: 1rem
+  // -------------------------------
 
 
 /*
