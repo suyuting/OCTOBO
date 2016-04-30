@@ -1,3 +1,5 @@
+- var presskitLink = "http://playoctobo.com/press"
+
 - var team = [ { image: 1, name: "Yuting Su", site: "http://suyuting.com/", roles: ["Team Lead", "Creative Director"] } ]
 - team.push( { image: 2, name: "Julian Ceipek", site: "http://jceipek.com/", roles: ["Game Designer", "Tech Director"] } )
 - team.push( { image: 3, name: "Xian Lu", site: "http://luxianlx.com/", roles: ["Game Designer", "Multimedia Designer"] } )
@@ -54,7 +56,7 @@ html(lang="en")
               a.pure-menu-link(href="#contact").
                 CONTACT
             li.pure-menu-item.hide-on-mobile
-              a.pure-menu-link(href="#contact").
+              a.pure-menu-link(href="#{presskitLink}").
                 PRESS
     .pure-g
       .pure-u-1.octobo-hero
@@ -117,10 +119,11 @@ html(lang="en")
             p.
               OCTOBO's storybooks make family storytime more interactive, with magical goodies from OCTOBO's world.
 
+    hr.octobo-divider
 
     .octobo-video-wrapper
-      .octobo-video.pure-g
-        .pure-u-1-1
+      .pure-g
+        .pure-u-1-1.pure-u-md-1-2.octobo-video
           #video.video-wrapper
             iframe(width="560", height="315", src="https://www.youtube.com/embed/hdQ2dtPioe4?modestbranding=0&showinfo=0&rel=0" frameborder="0", allowfullscreen)
 
@@ -147,7 +150,7 @@ html(lang="en")
           blockquote.octobo-quote
             a(href="http://gdt.stanford.edu/what-can-an-octopus-teach-us-about-emotion/")
               p.
-                &ldquo;&hellip;direct interaction [with Octobo…] might have the greatest potential for a true emotional and empathetic experience&rdquo;
+                &ldquo;&hellip;direct interaction [with Octobo&hellip;] might have the greatest potential for a true emotional and empathetic experience&rdquo;
               footer
                 cite.
                   Stanford
@@ -185,6 +188,6 @@ html(lang="en")
           .contact-options
             a.contact-item.octobo-email(href="mailto:playoctobo@gmail.com").
               playoctobo@gmail.com
-            a.contact-item.octobo-presskit.pure-button(href="http://playoctobo.com/press").
+            a.contact-item.octobo-presskit.pure-button(href="#{presskitLink}").
               Presskit
     script(src="main.js")

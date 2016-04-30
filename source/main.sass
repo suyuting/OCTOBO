@@ -4,6 +4,7 @@ $menu-text-color: #fff
 $main-text-color: #fff
 $blurb-bg-color: #3dc3d4
 $team-bg-color: #3dc3d4
+$divider-color: red
 
 @mixin transform($transforms)
   -moz-transform: $transforms
@@ -19,6 +20,8 @@ $team-bg-color: #3dc3d4
   -webkit-transition: $transitions
   transition: $transitions
 
+@function aspectRatioPercent($width, $height)
+  @return percentage($height/$width)
 
 *
   -webkit-box-sizing: border-box
@@ -37,15 +40,19 @@ h1, h2, h3
   letter-spacing: 1px
   line-height: 1.2em
 
-.pure-img
-  width: 100%
-
 // When setting the primary font stack, apply it to the Pure grid units along
 // with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 // specific font stacks to ensure the greatest OS/browser compatibility.
 html, button, input, select, textarea, .pure-g [class *= "pure-u"]
   // /* Set your content font stack here: */
   font-family: 'Karla', sans-serif
+
+.team-row, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu
+  max-width: 70rem
+  margin: auto
+
+.pure-img
+  width: 100%
 
 // -------------------
 // MENU ------------------
@@ -155,51 +162,7 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"]
 // -----------------------
 // -------------------
 
-// -------------------
-// TEAM ------------------
 
-.team-container
-  padding: 1rem 0
-  background-color: $team-bg-color
-  color: #fff
-
-.team-container h2
-  text-align: center
-
-.team-person
-  display: block
-  padding: 2rem
-  letter-spacing: initial
-  text-align: center
-
-.team-person img
-  border-radius: 50%
-
-a.team-person
-  text-decoration: none
-  @include transition(opacity 0.4s)
-
-a.team-person:hover
-  text-decoration: none
-  opacity: 0.5
-
-.team-person h3
-  margin: 0
-
-.team-person-description
-  padding: 0
-  color: #fff
-
-.team-person ul
-  margin: 0
-  padding: 0
-
-.team-person li
-  list-style: none
-  line-height: 1em
-
-// -----------------------
-// -------------------
 
 // -------------------
 // EVENT ------------------
@@ -282,14 +245,13 @@ a.octobo-event:hover
 // -------------------
 // MEET OCTOBO -----------
 
-.meet-octobo
-  margin-top: 1rem
-
 .meet-octobo h2
   text-align: center
 
 .octobo-callout
-  padding: 3rem
+  padding-top: 2rem
+  padding-left: 1rem
+  padding-right: 1rem
 
 // -----------------------
 // -------------------
@@ -310,6 +272,87 @@ a.octobo-event:hover
 
 .octobo-quote cite::before
   content: '\2014 \00A0'
+// -----------------------
+// -------------------
+
+
+
+
+.octobo-divider
+  width: 12em
+  border-color: $divider-color
+  border-style: solid
+
+// -------------------
+// VIDEO ----------------
+
+.video-wrapper
+  position: relative
+  padding-bottom: aspectRatioPercent(16,9)
+  height: 0
+  margin: auto
+
+.video-wrapper iframe
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+// .octobo-video-wrapper
+//   background-color: #000
+
+.octobo-video
+  margin: auto
+  padding-bottom: 1rem
+
+// ----------------------
+// -------------------
+
+
+// -------------------
+// TEAM ------------------
+
+.team-container
+  padding: 1rem 0
+  background-color: $team-bg-color
+  color: #fff
+
+.team-container h2
+  text-align: center
+
+.team-person
+  display: block
+  padding: 2rem
+  letter-spacing: initial
+  text-align: center
+
+.team-person img
+  border-radius: 50%
+
+a.team-person
+  text-decoration: none
+  @include transition(opacity 0.4s)
+
+a.team-person:hover
+  text-decoration: none
+  opacity: 0.5
+
+.team-person h3
+  margin: 0
+
+.team-person-description
+  padding: 0
+  color: #fff
+
+.team-person ul
+  margin: 0
+  padding: 0
+
+.team-person li
+  list-style: none
+  line-height: 1em
+
 // -----------------------
 // -------------------
 
@@ -347,38 +390,6 @@ a.octobo-email
 
 // -----------------------
 // -------------------
-
-// -------------------
-// VIDEO ----------------
-
-.video-wrapper
-  position: relative
-  padding-bottom: 56.25% /* 16:9 */
-  padding-top: 25px
-  height: 0
-  margin: auto
-
-.video-wrapper iframe
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-
-.octobo-video-wrapper
-  background-color: #000
-
-// ----------------------
-// -------------------
-
-
-
-
-
-.team-row, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu
-  max-width: 70rem
-  margin: auto
-
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
