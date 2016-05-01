@@ -29,6 +29,7 @@ html(lang="en")
     <!--<![endif]-->
 
     link(href='https://fonts.googleapis.com/css?family=Karla|Comfortaa:700', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
 
     //- link(href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css", rel="stylesheet", type="text/css")
     //- style(type="text/css").
@@ -56,7 +57,7 @@ html(lang="en")
               a.pure-menu-link(href="#contact").
                 CONTACT
             li.pure-menu-item.hide-on-mobile
-              a.pure-menu-link(href="#{presskitLink}").
+              a.pure-button.pure-menu-link.octobo-presskit(href="#{presskitLink}").
                 PRESS
     .pure-g
       .pure-u-1.octobo-hero
@@ -158,25 +159,23 @@ html(lang="en")
     .team-container
 
       mixin person(info)
-        .pure-u-lg-1-4.pure-u-sm-1.pure-u-md-1-2
-          a(href=info.site).team-person
-            img.pure-img(src="images/team/#{info.image}.jpg")
-            .team-person-description
-              h3=info.name
-              ul
-                each role in info.roles
-                  li=role
+        //- .pure-u-lg-1-4.pure-u-sm-1.pure-u-md-1-2
+        a(href=info.site).team-person
+          img.pure-img(src="images/team/#{info.image}.jpg")
+          .team-person-description
+            h3=info.name
+            ul
+              each role in info.roles
+                li=role
 
       .pure-g
         .pure-u-1
           h2#team.
             Team OCTOBO
-      .pure-g.team-row
-        each val in team.slice(0,4)
-          +person(val)
-      .pure-g.team-row
-        each val in team.slice(4,8)
-          +person(val)
+        .team-row
+          each val in team
+            +person(val)
+      //- .pure-g.team-row
 
     .octobo-contact-container
       .pure-g
@@ -186,8 +185,14 @@ html(lang="en")
       .pure-g
         .pure-u-1
           .contact-options
-            a.contact-item.octobo-email(href="mailto:playoctobo@gmail.com").
-              playoctobo@gmail.com
             a.contact-item.octobo-presskit.pure-button(href="#{presskitLink}").
               Presskit
+
+            a(href="mailto:playoctobo@gmail.com", title="email")
+              span.fa.fa-envelope(aria-hidden="true")
+            a(href="https://twitter.com/playoctobo", title="twitter")
+              span.fa.fa-twitter-square(aria-hidden="true")
+            a(href="http://facebook.com/octobo", title="facebook")
+              span.fa.fa-facebook-official(aria-hidden="true")
+
     script(src="main.js")

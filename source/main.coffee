@@ -1,32 +1,49 @@
-# ((window, document) ->
-#   menu = document.getElementById('menu')
-#   WINDOW_CHANGE_EVENT = if window.onorientationchange then 'orientationchange' else 'resize'
+easeInOutSine = (t, startVal, endVal, duration) ->
+  delta = endVal - startVal
+  return -delta/2 * (Math.cos(Math.PI*t/duration) - 1) + startVal
 
-#   toggleHorizontal = ->
-#     [].forEach.call document.getElementById('menu').querySelectorAll('.octobo-can-transform'), (el) ->
-#       el.classList.toggle 'pure-menu-horizontal'
+# ---------------------------------------------------
+# Smooth Scroll
+# ---------------------------------------------------
+
+scrollTo = (element, to, duration, cb) ->
+  initialValue = element.scrollTop
+  start = null
+  step = (timestamp) ->
+    if start is null
+      start = timestamp
+    progress = timestamp - start
+    if progress < duration
+      element.scrollTop = easeInOutSine(progress, initialValue, to, duration)
+      window.requestAnimationFrame(step)
+  cb()
+  window.requestAnimationFrame(step)
+
+# scrollTo = (element, to, duration) ->
+#   if (duration <= 0)
+#     return
+#   difference = to - element.scrollTop
+#   perTick = difference / duration * 10
+
+#   setTimeout(() ->
+#     element.scrollTop = element.scrollTop + perTick
+#     if (element.scrollTop is to)
 #       return
-#     return
+#     scrollTo(element, to, duration - 10)
+#   , 10)
 
-#   toggleMenu = ->
-#     # set timeout so that the panel has a chance to roll up
-#     # before the menu switches states
-#     if menu.classList.contains('open')
-#       setTimeout toggleHorizontal, 500
-#     else
-#       toggleHorizontal()
-#     menu.classList.toggle 'open'
-#     document.getElementById('toggle').classList.toggle 'x'
-#     return
+getTargetEl = (a) ->
+  document.getElementById(a.getAttribute('href')[1..])
 
-#   closeMenu = ->
-#     if menu.classList.contains('open')
-#       toggleMenu()
-#     return
+getScrollers = () ->
+  a for a in document.getElementsByTagName('a') when a.getAttribute('href')[0] == '#'
 
-#   document.getElementById('toggle').addEventListener 'click', (e) ->
-#     toggleMenu()
-#     return
-#   window.addEventListener WINDOW_CHANGE_EVENT, closeMenu
-#   return
-# ) this, @document
+for scroller in getScrollers()
+  scroller.onclick = () ->
+    target = getTargetEl(this)
+    dest = if target? then target.offsetTop else 0
+    duration = Math.abs(document.body.scrollTop - dest)/3
+    console.log "HI"
+    scrollTo(document.body, dest, duration, () -> window.location.hash = (if target? then target.id else '#'))
+    false
+# ---------------------------------------------------
