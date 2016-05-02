@@ -2,16 +2,19 @@ $menu-bg-color: #2d3e50
 $menu-shadow-color: #1F1F1F
 $menu-color: #333333
 $menu-text-color: #fff
+$menu-text-hover-color: #AECFE5
 $main-text-color: #fff
 $blurb-bg-color: #3dc3d4
 $team-bg-color: #3dc3d4
 $divider-color: red
 $team-header-color: #fff
-$person-name-color: green
-$person-description-color: blue
-$person-name-hover-color: black
-$person-description-hover-color: black
+$person-name-color: #fff
+$person-description-color: #eee
+$person-name-hover-color: #ddd
+$person-description-hover-color: #ddd
 $hover-transition-duration: 0.4s
+$contact-item-color: #000
+$contact-item-hover-color: #aaa
 
 @mixin transform($transforms)
   -moz-transform: $transforms
@@ -86,6 +89,10 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
   padding-left: 0.5rem
   padding-right: 0.5rem
 
+.pure-menu-link:hover
+  background: none
+  color: $menu-text-hover-color
+
 .octobo-menu img
   width: 9rem
 
@@ -93,12 +100,7 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
   color: white
 
 .octobo-menu a
-  color: #6FBEF3
-
-// .octobo-menu li a:hover, .octobo-menu li a:focus
-//   background: none
-//   border: none
-//   color: #AECFE5
+  color: $menu-text-color
 
 .hide-on-mobile
   display: none !important
@@ -397,11 +399,20 @@ a.octobo-event:hover
   text-align: center
   height: 10rem
 
-.contact-item
-  display: block
+.contact-list
+  padding: 0
 
 .contact-item
+  display: inline-block
+  padding: 0
+  font-size: 2em
   padding: 0.5rem
+
+.contact-item a
+  color: $contact-item-color
+
+.contact-item:hover a
+  color: $contact-item-hover-color
 
 a.octobo-email
   text-decoration: none
@@ -409,15 +420,21 @@ a.octobo-email
   font-size: 1.5em
 
 .octobo-presskit
+  display: block
   background-color: #000
   color: #fff
 
-a.octobo-presskit:hover
+// a.octobo-presskit:hover
+.octobo-presskit:hover
   background-color: #fff
   color: #000
 
 // -----------------------
 // -------------------
+
+footer
+  text-align: center
+  padding-bottom: 1rem
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --

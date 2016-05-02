@@ -31,13 +31,6 @@ html(lang="en")
     link(href='https://fonts.googleapis.com/css?family=Karla|Comfortaa:700', rel='stylesheet', type='text/css')
     link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
 
-    //- link(href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css", rel="stylesheet", type="text/css")
-    //- style(type="text/css").
-    //-   #mc_embed_signup {
-    //-     background:#fff;
-    //-     clear:left;
-    //-     font:14px Helvetica,Arial,sans-serif;
-    //-   }
     link(rel="stylesheet", href="main.css")
 
   body
@@ -186,14 +179,21 @@ html(lang="en")
       .pure-g
         .pure-u-1
           .contact-options
-            a.contact-item.octobo-presskit.pure-button(href="#{presskitLink}").
+            a.octobo-presskit.pure-button(href="#{presskitLink}").
               Presskit
 
-            a(href="mailto:playoctobo@gmail.com", title="email")
-              span.fa.fa-envelope(aria-hidden="true")
-            a(href="https://twitter.com/playoctobo", title="twitter")
-              span.fa.fa-twitter-square(aria-hidden="true")
-            a(href="http://facebook.com/octobo", title="facebook")
-              span.fa.fa-facebook-official(aria-hidden="true")
+            ul.contact-list
+              li.contact-item
+                a(href="mailto:playoctobo@gmail.com", title="email")
+                  span.fa.fa-envelope(aria-hidden="true")
+              li.contact-item
+                a(href="https://twitter.com/playoctobo", title="twitter")
+                  span.fa.fa-twitter-square(aria-hidden="true")
+              li.contact-item
+                a(href="http://facebook.com/octobo", title="facebook")
+                  span.fa.fa-facebook-official(aria-hidden="true")
+
+    footer
+      &copy; Team Octobo, 2016
 
     script(src="main.js")
