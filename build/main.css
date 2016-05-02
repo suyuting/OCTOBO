@@ -13,7 +13,7 @@ h1, h2, h3 {
   letter-spacing: 1px;
   line-height: 1.2em; }
 
-html, button, input, select, textarea, .pure-g [class*="pure-u"] {
+html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   font-family: "Karla", sans-serif; }
 
 .team-list, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu {
@@ -203,9 +203,10 @@ a.octobo-event:hover {
 .team-container {
   padding: 1rem 0;
   background-color: #3dc3d4;
-  color: white; }
+  padding-bottom: 2rem; }
 
 .team-container h2 {
+  color: white;
   text-align: center; }
 
 .team-list {
