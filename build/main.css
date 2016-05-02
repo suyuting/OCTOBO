@@ -49,6 +49,9 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   background: none;
   color: #aecfe5; }
 
+.pure-menu-link:focus {
+  background: none; }
+
 .octobo-menu img {
   width: 9rem; }
 
