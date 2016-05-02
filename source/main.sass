@@ -1,10 +1,16 @@
 $menu-bg-color: #2d3e50
+$menu-shadow-color: #1F1F1F
 $menu-color: #333333
 $menu-text-color: #fff
 $main-text-color: #fff
 $blurb-bg-color: #3dc3d4
 $team-bg-color: #3dc3d4
 $divider-color: red
+$person-name-color: green
+$person-description-color: blue
+$person-name-hover-color: black
+$person-description-hover-color: black
+$hover-transition-duration: 0.4s
 
 @mixin transform($transforms)
   -moz-transform: $transforms
@@ -47,7 +53,7 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"]
   // /* Set your content font stack here: */
   font-family: 'Karla', sans-serif
 
-.team-row, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu
+.team-list, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu
   max-width: 70rem
   margin: auto
 
@@ -60,20 +66,14 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"]
 .octobo-menu-wrapper
   padding: 0.5em
   text-align: center
-  box-shadow: 0 1px 1px rgba(0,0,0, 0.10)
   background-color: $menu-bg-color
-  box-shadow: 0 0 5px #1F1F1F
+  box-shadow: 0 0 5px $menu-shadow-color
 
 .pure-menu.pure-menu-fixed
-  /* Fixed menus normally have a border at the bottom. */
-  border-bottom: none
   /* I need a higher z-index here because of the scroll-over effect. */
   z-index: 4
 
 .octobo-menu .pure-menu-heading
-  // color: white
-  // font-weight: 400
-  // font-size: 120%
   padding: 0.1rem
   padding-right: 0.5rem
   padding-top: 0.5rem
@@ -321,31 +321,51 @@ a.octobo-event:hover
 .team-container h2
   text-align: center
 
+.team-list
+  padding: 0
+  text-align: center
+
 .team-person
   display: inline-block
   padding: 2rem
   width: 17rem
-  height: 25rem
+  height: 20rem
   letter-spacing: initial
   text-align: center
+  vertical-align: top
 
 .team-person img
   border-radius: 50%
 
-a.team-person
+.team-person a
   text-decoration: none
-  @include transition(opacity 0.4s)
 
-a.team-person:hover
-  text-decoration: none
+.team-person img
+  @include transition(opacity $hover-transition-duration)
+
+.team-person:hover img
   opacity: 0.5
 
 .team-person h3
   margin: 0
+  padding-top: 0.2em
+  color: $person-name-color
 
 .team-person-description
   padding: 0
-  color: #fff
+  color: $person-description-color
+
+.team-person h3
+  @include transition(color $hover-transition-duration)
+
+.team-person:hover h3
+  color: $person-name-hover-color
+
+.team-person .team-person-description
+  @include transition(color $hover-transition-duration)
+
+.team-person:hover .team-person-description
+  color: $person-description-hover-color
 
 .team-person ul
   margin: 0

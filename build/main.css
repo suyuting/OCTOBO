@@ -4,31 +4,49 @@
   box-sizing: border-box; }
 
 body {
-  line-height: 1.7em;
-  font-size: 13px; }
+  line-height: 1.3em;
+  font-size: 21px; }
+
+h1, h2, h3 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2em; }
+
+html, button, input, select, textarea, .pure-g [class*="pure-u"] {
+  font-family: "Karla", sans-serif; }
+
+.team-list, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu {
+  max-width: 70rem;
+  margin: auto; }
 
 .pure-img {
   width: 100%; }
 
-.octobo-menu {
+.octobo-menu-wrapper {
   padding: 0.5em;
   text-align: center;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
-
-.octobo-menu {
   background-color: #2d3e50;
   box-shadow: 0 0 5px #1f1f1f; }
 
 .pure-menu.pure-menu-fixed {
-  /* Fixed menus normally have a border at the bottom. */
-  border-bottom: none;
   /* I need a higher z-index here because of the scroll-over effect. */
   z-index: 4; }
 
 .octobo-menu .pure-menu-heading {
-  color: white;
-  font-weight: 400;
-  font-size: 120%; }
+  padding: 0.1rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem; }
+
+.octobo-menu {
+  font-size: 0.7em; }
+
+.pure-menu-link {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.octobo-menu img {
+  width: 9rem; }
 
 .octobo-menu .pure-menu-selected a {
   color: white; }
@@ -36,34 +54,36 @@ body {
 .octobo-menu a {
   color: #6fbef3; }
 
-.octobo-menu li a:hover, .octobo-menu li a:focus {
-  background: none;
-  border: none;
-  color: #aecfe5; }
+.hide-on-mobile {
+  display: none !important; }
 
 .octobo-hero {
   background: url(images/hero.jpg);
   background-position: top;
   background-size: cover;
-  height: 25rem; }
+  height: 30rem; }
 
 .octobo-hero-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); }
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center; }
 
 .octobo-about {
-  padding-top: 5rem;
   text-align: center;
   color: white;
-  font-size: 1.5rem; }
+  margin: auto;
+  padding-top: 2rem; }
 
 .octobo-about h1 {
   margin: 0;
-  padding-top: 2rem; }
+  padding-top: 2rem;
+  font-size: 2.7em;
+  line-height: 1em; }
 
 .octobo-about p {
-  font-size: 1.3rem; }
+  font-size: 1.3em; }
 
 .octobo-signup {
   color: black; }
@@ -75,56 +95,15 @@ body {
   max-width: 38rem;
   margin: auto; }
 
+.octobo-signup-item {
+  display: inline-block;
+  margin: 0 0.2em; }
+
 .octobo-signup-item input {
   margin: 0.5rem auto; }
 
-.team-container {
-  padding: 1rem 0;
-  background-color: #3dc3d4;
-  color: white; }
-
-.team-container h2 {
-  text-align: center; }
-
-.team-row, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video {
-  max-width: 70rem;
-  margin: auto; }
-
-.team-person {
-  display: block;
-  padding: 2rem;
-  letter-spacing: initial;
-  text-align: center; }
-
-.team-person img {
-  border-radius: 50%; }
-
-a.team-person {
-  text-decoration: none;
-  -moz-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -ms-transition: opacity 0.4s;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s; }
-
-a.team-person:hover {
-  text-decoration: none;
-  opacity: 0.5; }
-
-.team-person h3 {
-  margin: 0; }
-
-.team-person-description {
-  padding: 0;
-  color: white; }
-
-.team-person ul {
-  margin: 0;
-  padding: 0; }
-
-.team-person li {
-  list-style: none;
-  line-height: 1em; }
+.octobo-signup-item-email {
+  width: 19rem; }
 
 .rounded-icon {
   border-radius: 12px; }
@@ -133,15 +112,14 @@ a.team-person:hover {
   background-color: white; }
 
 .octobo-event {
-  max-width: 40rem;
-  height: 12rem;
+  height: 18rem;
   padding: 1rem;
   margin: auto;
   display: table; }
 
 .octobo-event a, .octobo-event p {
-  display: table-cell;
-  vertical-align: middle; }
+  display: block;
+  margin: auto; }
 
 a.octobo-event {
   text-decoration: none;
@@ -151,45 +129,46 @@ a.octobo-event:hover {
   opacity: 0.5; }
 
 .octobo-event img {
-  margin-top: 2.5rem;
-  width: 5rem;
-  float: left;
-  margin-right: 1rem; }
+  margin-top: 4.5rem;
+  width: 7rem;
+  margin: 1rem auto;
+  display: block; }
 
-.octobo-feature-block {
-  height: 27rem; }
+.octobo-intro {
+  background-color: #3dc3d4;
+  color: white; }
+
+.octobo-intro-description-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1em; }
 
 .octobo-feature-image {
+  min-height: 27rem;
   background: no-repeat center right url(images/features-intro.jpg);
   background-size: cover; }
 
-.octobo-feature-blurb-wrapper {
-  background-color: #3dc3d4;
-  color: white;
-  padding: 3rem;
-  display: flex;
-  align-items: center; }
-
 .octobo-feature-blurb {
-  max-width: 35rem; }
+  max-width: 35rem;
+  margin: auto; }
 
 .octobo-feature-blurb h2 {
   margin: 0; }
-
-.meet-octobo {
-  margin-top: 1rem; }
 
 .meet-octobo h2 {
   text-align: center; }
 
 .octobo-callout {
-  padding: 3rem; }
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 .octobo-quotes-wrapper {
   background-color: #f266bc; }
 
 .octobo-quote {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-style: italic; }
 
 .octobo-quote a {
   text-decoration: none;
@@ -198,6 +177,102 @@ a.octobo-event:hover {
 
 .octobo-quote cite::before {
   content: "\2014 \00A0"; }
+
+.octobo-divider {
+  width: 12em;
+  border-color: red;
+  border-style: solid; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: auto; }
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.octobo-video {
+  margin: auto;
+  padding-bottom: 1rem; }
+
+.team-container {
+  padding: 1rem 0;
+  background-color: #3dc3d4;
+  color: white; }
+
+.team-container h2 {
+  text-align: center; }
+
+.team-list {
+  padding: 0;
+  text-align: center; }
+
+.team-person {
+  display: inline-block;
+  padding: 2rem;
+  width: 17rem;
+  height: 20rem;
+  letter-spacing: initial;
+  text-align: center;
+  vertical-align: top; }
+
+.team-person img {
+  border-radius: 50%; }
+
+.team-person a {
+  text-decoration: none; }
+
+.team-person img {
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s; }
+
+.team-person:hover img {
+  opacity: 0.5; }
+
+.team-person h3 {
+  margin: 0;
+  padding-top: 0.2em;
+  color: green; }
+
+.team-person-description {
+  padding: 0;
+  color: blue; }
+
+.team-person h3 {
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s; }
+
+.team-person:hover h3 {
+  color: black; }
+
+.team-person .team-person-description {
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  -ms-transition: color 0.4s;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s; }
+
+.team-person:hover .team-person-description {
+  color: black; }
+
+.team-person ul {
+  margin: 0;
+  padding: 0; }
+
+.team-person li {
+  list-style: none;
+  line-height: 1em; }
 
 .octobo-contact-container {
   background-color: white; }
@@ -227,22 +302,9 @@ a.octobo-email {
   background-color: black;
   color: white; }
 
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-  margin: auto; }
-
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.octobo-video-wrapper {
-  background-color: black; }
+a.octobo-presskit:hover {
+  background-color: white;
+  color: black; }
 
 /* -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
@@ -250,13 +312,13 @@ a.octobo-email {
  */
 @media (min-width: 48em) {
   /* We increase the body font size */
-  body {
-    font-size: 16px; }
-
-  /* We want to give the content area some more padding */
   /* We can align the menu header to the left, but float the menu items to the right. */
   .octobo-menu {
-    text-align: left; }
+    text-align: left;
+    font-size: 1em; }
+
+  .hide-on-mobile {
+    display: inline-block !important; }
 
   .octobo-menu ul {
     float: right; }
@@ -264,11 +326,19 @@ a.octobo-email {
   .octobo-hero {
     height: 40rem; }
 
-  .octobo-about {
-    padding-top: 20rem; } }
+  .octobo-event a, .octobo-event p {
+    display: table-cell;
+    vertical-align: middle; }
+
+  .octobo-event img {
+    margin-top: 4rem;
+    margin-right: 1rem; } }
 /* -- DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large devices, we want to override some
  * of the mobile and tablet styles.
  */
+@media (min-width: 78em) {
+  .octobo-feature-blurb {
+    margin: initial; } }
 
 /*# sourceMappingURL=main.css.map */
