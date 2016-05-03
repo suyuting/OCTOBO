@@ -93,7 +93,8 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   line-height: 1em; }
 
 .octobo-about p {
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  padding: 0 1rem; }
 
 .octobo-signup {
   color: black; }
@@ -177,7 +178,8 @@ a.octobo-event:hover {
   font-size: 0.8em; }
 
 .meet-octobo {
-  margin: 6rem auto; }
+  margin: 1rem auto;
+  padding-top: 3rem; }
 
 .meet-octobo h3 {
   color: #00465c; }
@@ -191,8 +193,13 @@ a.octobo-event:hover {
   font-size: 1rem;
   color: lightslategray; }
 
+.octobo-quotes-container {
+  display: flex;
+  align-items: flex-end; }
+
 .octobo-quotes-wrapper {
-  background: url(images/quote.jpg); }
+  background: url(images/quote.jpg);
+  background-size: cover; }
 
 .octobo-quote {
   font-family: "Viga", sans-serif;
@@ -200,26 +207,16 @@ a.octobo-event:hover {
   font-style: italic;
   letter-spacing: 0.08em; }
 
+.octobo-quote p {
+  margin: 0 0 1rem 0; }
+
 .octobo-quote a {
   text-decoration: none;
   color: white;
   line-height: 1.2em; }
 
-.octobo-quote cite::before {
-  content: "\2014 \00A0"; }
-
 .octobo-quote img {
-  width: 8em;
-  margin: 3rem auto; }
-
-.octobo-quote-img img {
-  width: 6em;
-  margin: 1rem auto 5rem; }
-
-.octobo-divider {
-  width: 12em;
-  border-color: white;
-  border-style: solid; }
+  width: 8em; }
 
 .video-wrapper {
   position: relative;
@@ -233,6 +230,9 @@ a.octobo-event:hover {
   left: 0;
   width: 100%;
   height: 100%; }
+
+.octobo-video-wrapper {
+  padding-top: 5rem; }
 
 .octobo-video {
   margin: auto;
@@ -415,14 +415,11 @@ footer {
     font-size: 1.5rem; }
 
   .octobo-quotes-wrapper {
-    height: 28rem;
+    min-height: 28rem;
     margin: 5rem auto 1rem; }
 
   .octobo-quote {
     margin: 5rem 2rem 0rem; }
-
-  .octobo-quote p {
-    height: 6em; }
 
   .octobo-event a, .octobo-event p {
     display: table-cell;
@@ -438,3 +435,5 @@ footer {
 @media (min-width: 78em) {
   .octobo-feature-blurb {
     margin: initial; } }
+
+/*# sourceMappingURL=main.css.map */
