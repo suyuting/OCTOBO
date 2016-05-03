@@ -1,20 +1,20 @@
-$menu-bg-color: #2d3e50
+$menu-bg-color: #00364b
 $menu-shadow-color: #1F1F1F
 $menu-color: #333333
 $menu-text-color: #fff
-$menu-text-hover-color: #AECFE5
+$menu-text-hover-color: #73d0da
 $main-text-color: #fff
 $blurb-bg-color: #3dc3d4
-$team-bg-color: #3dc3d4
-$divider-color: red
-$team-header-color: #fff
-$person-name-color: #fff
-$person-description-color: #eee
-$person-name-hover-color: #ddd
+$team-bg-color: #fff
+$divider-color: #fff
+$team-header-color: #00465c
+$person-name-color: #00465c
+$person-description-color: #999
+$person-name-hover-color: #73d0da
 $person-description-hover-color: #ddd
 $hover-transition-duration: 0.4s
-$contact-item-color: #000
-$contact-item-hover-color: #aaa
+$contact-item-color: #fff
+$contact-item-hover-color: #00465c
 
 @mixin transform($transforms)
   -moz-transform: $transforms
@@ -33,6 +33,9 @@ $contact-item-hover-color: #aaa
 @function aspectRatioPercent($width, $height)
   @return percentage($height/$width)
 
+// @import url(https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Nunito:400,300)
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300|Candal|Varela+Round|Poppins:300,500,600|Acme|Archivo+Black|Actor|Paytone+One|Viga)
+
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -45,21 +48,24 @@ body
   font-size: 21px
 
 h1, h2, h3
-  font-family: 'Comfortaa', sans-serif
-  font-weight: 700
+  font-family: 'Varela Round', sans-serif
+  font-weight: 300
   letter-spacing: 1px
-  line-height: 1.2em
+  line-height: 1.5em
 
 // When setting the primary font stack, apply it to the Pure grid units along
 // with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
 // specific font stacks to ensure the greatest OS/browser compatibility.
 html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
   // /* Set your content font stack here: */
-  font-family: 'Karla', sans-serif
+  font-family: 'Nunito', sans-serif
+  font-weight: 300
+  light-height: 1.5em
+
 
 .team-list, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu
   max-width: 70rem
-  margin: auto
+  margin: auto 
 
 .pure-img
   width: 100%
@@ -83,7 +89,7 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
   padding-top: 0.5rem
 
 .octobo-menu
-  font-size: 0.7em
+  font-size: 0.4em
 
 .pure-menu-link
   padding-left: 0.5rem
@@ -104,6 +110,9 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 
 .octobo-menu a
   color: $menu-text-color
+  font-family: 'Poppins', sans-serif
+
+
 
 .hide-on-mobile
   display: none !important
@@ -116,25 +125,29 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 // SPLASH ----------------
 
 .octobo-hero
-  background: url(images/hero.jpg)
+  background: url(images/hero2.jpg)
   background-position: top
   background-size: cover
-  height: 30rem
+  height: 45rem
+  color: #fff
+  // min-height: 50rem
 
 .octobo-hero-overlay
+  background: url(images/grid.png)
   width: 100%
   height: 100%
-  background-color: rgba(0,0,0,0.3)
+  background-color: rgba(0,0,0,0.1)
   display: flex
   align-items: center
+
 
 .octobo-about
   // padding-top: 5rem
   text-align: center
   color: $main-text-color
   margin: auto
-  padding-top: 2rem
-  // font-size: 1.5rem
+  padding-top: 4rem
+
 
 .octobo-about h1
   margin: 0
@@ -162,6 +175,9 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 .octobo-signup-item input
   margin: 0.5rem auto
 
+.octobo-signup-item .pure-button-primary
+  background-color: #73d0da
+
 .octobo-signup-item-email
   width: 19rem
 
@@ -182,14 +198,16 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 .octobo-event
   height: 18rem
   padding: 1rem
-  margin: auto
+  margin: 3rem auto
   display: table
 
 .octobo-event a, .octobo-event p
   // display: table-cell
   // vertical-align: middle
   display: block
-  margin: auto
+  margin: auto 1rem
+  color: #778899
+
 
 // .octobo-event p
 //   display: block
@@ -203,9 +221,9 @@ a.octobo-event:hover
   opacity: 0.5
 
 .octobo-event img
-  margin-top: 4.5rem
-  width: 7rem
-  margin: 1rem auto
+  margin-top: 4rem
+  width: 8rem
+  margin: 2rem auto
   display: block
 
 // -----------------------
@@ -218,6 +236,8 @@ a.octobo-event:hover
   // min-height: 27rem
   background-color: #3dc3d4
   color: #fff
+  margin-bottom: 5rem
+  line-height: 1.5rem
 
 // .octobo-feature-block
 //   height: 100%
@@ -243,7 +263,14 @@ a.octobo-event:hover
   margin: auto
 
 .octobo-feature-blurb h2
-  margin: 0
+  font-family: 'Varela Round', sans-serif
+  margin: 0.4em
+
+
+.octobo-feature-blurb p
+  margin: 2em 0.4em
+  font-size: 0.8em
+
 
 // -----------------------
 // -------------------
@@ -265,11 +292,17 @@ a.octobo-event:hover
 // -------------------
 // QUOTES ----------------
 .octobo-quotes-wrapper
-  background-color: #f266bc
+  // background-color: #f266bc
+  background: url(images/quote.jpg)
+
+
 
 .octobo-quote
+  font-family: 'Viga', sans-serif
   font-size: 1.5rem
   font-style: italic
+  letter-spacing: 0.08em
+
 
 .octobo-quote a
   text-decoration: none
@@ -278,6 +311,11 @@ a.octobo-event:hover
 
 .octobo-quote cite::before
   content: '\2014 \00A0'
+
+.octobo-quote-img img
+  width: 10em
+  margin: 1rem auto 5rem
+
 // -----------------------
 // -------------------
 
@@ -321,12 +359,14 @@ a.octobo-event:hover
 
 .team-container
   padding: 1rem 0
-  background-color: $team-bg-color
+  background-color: #fff
   padding-bottom: 2rem
 
 .team-container h2
   color: $team-header-color
   text-align: center
+  padding: 2rem
+  font-size: 2em
 
 .team-list
   padding: 0
@@ -334,12 +374,14 @@ a.octobo-event:hover
 
 .team-person
   display: inline-block
-  padding: 2rem
-  width: 17rem
-  height: 20rem
+  padding: 1.5rem
+  width: 16rem
+  height: 24rem
   letter-spacing: initial
   text-align: center
   vertical-align: top
+
+
 
 .team-person img
   border-radius: 50%
@@ -353,14 +395,18 @@ a.octobo-event:hover
 .team-person:hover img
   opacity: 0.5
 
-.team-person h3
-  margin: 0
-  padding-top: 0.2em
-  color: $person-name-color
 
 .team-person-description
-  padding: 0
+  padding: 0.4em
   color: $person-description-color
+  font-size: 0.8em
+
+
+.team-person h3
+  margin: 0
+  padding-top: 1em
+  color: $person-name-color
+  font-size: 1em
 
 .team-person h3
   @include transition(color $hover-transition-duration)
@@ -376,11 +422,11 @@ a.octobo-event:hover
 
 .team-person ul
   margin: 0
-  padding: 0
+  padding: 0.6em
 
 .team-person li
   list-style: none
-  line-height: 1em
+  line-height: 1.2em
 
 // -----------------------
 // -------------------
@@ -390,17 +436,21 @@ a.octobo-event:hover
 // CONTACT/PRESS -----------
 
 .octobo-contact-container
-  background-color: #fff
+  background-color: #73d0da
+  margin: 2rem auto
 
 .octobo-contact-container h2
+  color: #fff
   text-align: center
+  padding: 2rem 0 0rem
+  font-size: 2em
 
 .contact-options
   margin: auto
   display: block
   max-width: 20rem
   text-align: center
-  height: 10rem
+  height: 15rem
 
 .contact-list
   padding: 0
@@ -409,7 +459,8 @@ a.octobo-event:hover
   display: inline-block
   padding: 0
   font-size: 2em
-  padding: 0.5rem
+  padding: 0.5rem 1.5rem
+  margin: 1.2rem auto
 
 .contact-item a
   color: $contact-item-color
@@ -420,24 +471,42 @@ a.octobo-event:hover
 a.octobo-email
   text-decoration: none
   color: #000
-  font-size: 1.5em
+  font-size: 1.2em
+
+.octobo-presskit-contact
+  display: block
+  padding: 0.8em 0
+  background-color: #73d0da
+  border-style: solid
+  border-width: 2px
+  border-color: #fff
+  color: #fff
+
+.octobo-presskit-contact:hover
+  background-color: #00465c
+  color: #fff
+  border-color: #00465c
 
 .octobo-presskit
   display: block
-  background-color: #000
+  padding: 0.8em 2em
+  background-color: #73d0da
   color: #fff
 
 // a.octobo-presskit:hover
 .octobo-presskit:hover
   background-color: #fff
-  color: #000
+  color: #73d0da
+ 
 
 // -----------------------
 // -------------------
 
 footer
   text-align: center
-  padding-bottom: 1rem
+  padding: 2rem
+  font-size: 1.2rem
+  color: #999
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
@@ -453,17 +522,32 @@ footer
   /* We can align the menu header to the left, but float the menu items to the right. */
   .octobo-menu
     text-align: left
-    font-size: 1em
+    font-size: 0.8em
 
   .hide-on-mobile
     display: inline-block !important
 
   .octobo-menu ul
     float: right
+    margin: 0.1em
+
+  .octobo-menu li 
+    padding-left: 2.4em
+    font-size: 0.8em
 
   .octobo-hero
-    height: 40rem
+    height: 50rem
 
+  .octobo-about
+    padding-top: 25rem
+    font-size: 1.5rem
+
+  .octobo-quotes-wrapper
+    height: 28rem
+    margin: 5rem auto 1rem
+
+  .octobo-quote
+    margin: 5rem 2rem 0rem
 
 
   // Make the alt.ctrl thing centered and put the text next to it
@@ -471,9 +555,10 @@ footer
     display: table-cell
     vertical-align: middle
 
+
   .octobo-event img
     margin-top: 4rem
-    margin-right: 1rem
+    margin-right: 3rem
   // -------------------------------
 
 
