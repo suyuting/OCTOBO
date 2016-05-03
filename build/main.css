@@ -67,7 +67,7 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   display: none !important; }
 
 .octobo-hero {
-  background: url(images/hero2.jpg);
+  background: url(images/hero.jpg);
   background-position: top;
   background-size: cover;
   height: 45rem;
