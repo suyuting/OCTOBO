@@ -113,14 +113,11 @@ html(lang="en")
             p.
               OCTOBO's storybooks make family storytime more interactive, with magical goodies from OCTOBO's world.
 
-    hr.octobo-divider
-
-    .octobo-video-wrapper
+    #video.octobo-video-wrapper
       .pure-g
         .pure-u-1-1.pure-u-md-1-1.octobo-video
-          #video.video-wrapper
+          .video-wrapper
             iframe(width="1920", height="1080", src="https://www.youtube.com/embed/hdQ2dtPioe4?modestbranding=0&showinfo=0&rel=0" frameborder="0", allowfullscreen)
-
 
     .octobo-quotes-wrapper
       .octobo-quotes-container.pure-g
@@ -129,26 +126,24 @@ html(lang="en")
             a(href="http://www.zam.com/article/262/a-strategy-game-played-on-a-sewing-machine-check-out-these-bizarre-controllers-from-gdc")
               p.
                 &ldquo;&hellip;to physically play with and hug a stuffed animal, and have it react to [you] is incredible&rdquo;
-              img.pure-img(src="images/logo_zam.png")
-              
-                
+              cite
+                img.pure-img(src="images/logo_zam.png", alt="Zam")
         .pure-u-1-1.pure-u-md-1-3
           blockquote.octobo-quote
             a(href="http://www.gamasutra.com/view/news/268346/Yuting_Sus_Octobo_A_21st_Century_Teddy_Ruxpin.php")
               p.
                 &ldquo;&hellip;a swarm of octopodes [will] make their way into toy stores around the world&rdquo;
-              img.pure-img(src="images/logo_gamasutra.png")
-             
+              cite
+                img.pure-img(src="images/logo_gamasutra.png", alt="Gamasutra")
         .pure-u-1-1.pure-u-md-1-3
           blockquote.octobo-quote
             a(href="http://gdt.stanford.edu/what-can-an-octopus-teach-us-about-emotion/")
               p.
                 &ldquo;&hellip;direct interaction [with Octobo&hellip;] might have the greatest potential for a true emotional and empathetic experience&rdquo;
-              img.pure-img(src="images/logo_standford.png")
-          
+              cite
+                img.pure-img(src="images/logo_standford.png", alt="Stanford")
 
     .team-container
-
       mixin person(info)
         //- .pure-u-lg-1-4.pure-u-sm-1.pure-u-md-1-2
         li.team-person

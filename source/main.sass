@@ -6,7 +6,6 @@ $menu-text-hover-color: #73d0da
 $main-text-color: #fff
 $blurb-bg-color: #3dc3d4
 $team-bg-color: #fff
-$divider-color: #fff
 $team-header-color: #00465c
 $person-name-color: #00465c
 $person-description-color: #999
@@ -65,7 +64,7 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 
 .team-list, .octobo-callout-row, .octobo-quotes-container, .event-container, .octobo-video, .octobo-menu
   max-width: 70rem
-  margin: auto 
+  margin: auto
 
 .pure-img
   width: 100%
@@ -154,6 +153,7 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 
 .octobo-about p
   font-size: 1.3em
+  padding: 0 1rem
 
 .octobo-signup
   color: #000
@@ -276,7 +276,8 @@ a.octobo-event:hover
 // MEET OCTOBO -----------
 
 .meet-octobo
-  margin: 6rem auto
+  margin: 1rem auto
+  padding-top: 3rem
 
 .meet-octobo h3
   // text-align: center
@@ -297,11 +298,16 @@ a.octobo-event:hover
 
 // -------------------
 // QUOTES ----------------
+.octobo-quotes-container
+
+  display: flex
+  align-items: flex-end
+
+
+
 .octobo-quotes-wrapper
-  // background-color: #f266bc
   background: url(images/quote.jpg)
-
-
+  background-size: cover
 
 .octobo-quote
   font-family: 'Viga', sans-serif
@@ -309,35 +315,22 @@ a.octobo-event:hover
   font-style: italic
   letter-spacing: 0.08em
 
+.octobo-quote p
+  margin: 0 0 1rem 0
 
 .octobo-quote a
   text-decoration: none
   color: #fff
   line-height: 1.2em
 
-.octobo-quote cite::before
-  content: '\2014 \00A0'
-
-
 
 .octobo-quote img
   width: 8em
-  margin: 3rem auto
 
-.octobo-quote-img img
-  width: 6em
-  margin: 1rem auto 5rem
 
 // -----------------------
 // -------------------
 
-
-
-
-.octobo-divider
-  width: 12em
-  border-color: $divider-color
-  border-style: solid
 
 // -------------------
 // VIDEO ----------------
@@ -355,7 +348,8 @@ a.octobo-event:hover
   width: 100%
   height: 100%
 
-// .octobo-video-wrapper
+.octobo-video-wrapper
+  padding-top: 5rem
 //   background-color: #000
 
 .octobo-video
@@ -509,7 +503,6 @@ a.octobo-email
 .octobo-presskit:hover
   background-color: #fff
   color: #73d0da
- 
 
 // -----------------------
 // -------------------
@@ -543,7 +536,7 @@ footer
     float: right
     margin: 0.1em
 
-  .octobo-menu li 
+  .octobo-menu li
     padding-left: 1.2em
     font-size: 0.8em
 
@@ -555,14 +548,11 @@ footer
     font-size: 1.5rem
 
   .octobo-quotes-wrapper
-    height: 28rem
+    min-height: 28rem
     margin: 5rem auto 1rem
 
   .octobo-quote
     margin: 5rem 2rem 0rem
-
-  .octobo-quote p
-    height: 6em
 
 
   // Make the alt.ctrl thing centered and put the text next to it
