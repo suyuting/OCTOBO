@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,300|Candal|Varela+Round|Poppins:300,500,600|Acme|Archivo+Black|Actor|Paytone+One|Viga);
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,300|Varela+Round|Viga);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   font-size: 21px; }
 
 h1, h2, h3 {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.5em; }
@@ -41,9 +41,6 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   padding-right: 0.5rem;
   padding-top: 0.5rem; }
 
-.octobo-menu {
-  font-size: 0.4em; }
-
 .pure-menu-link {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
@@ -56,14 +53,15 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   background: none; }
 
 .octobo-menu img {
-  width: 9rem; }
+  width: 8rem; }
 
 .octobo-menu .pure-menu-selected a {
   color: white; }
 
 .octobo-menu a {
   color: white;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Viga", sans-serif;
+  font-size: 1rem; }
 
 .hide-on-mobile {
   display: none !important; }
@@ -76,10 +74,9 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   color: white; }
 
 .octobo-hero-overlay {
-  background: url(images/grid.png);
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center; }
 
@@ -179,13 +176,20 @@ a.octobo-event:hover {
   margin: 2em 0.4em;
   font-size: 0.8em; }
 
-.meet-octobo h2 {
-  text-align: center; }
+.meet-octobo {
+  margin: 6rem auto; }
+
+.meet-octobo h3 {
+  color: #00465c; }
 
 .octobo-callout {
   padding-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem; }
+
+.octobo-callout p {
+  font-size: 1rem;
+  color: lightslategray; }
 
 .octobo-quotes-wrapper {
   background: url(images/quote.jpg); }
@@ -204,8 +208,12 @@ a.octobo-event:hover {
 .octobo-quote cite::before {
   content: "\2014 \00A0"; }
 
+.octobo-quote img {
+  width: 8em;
+  margin: 3rem auto; }
+
 .octobo-quote-img img {
-  width: 10em;
+  width: 6em;
   margin: 1rem auto 5rem; }
 
 .octobo-divider {
@@ -363,7 +371,7 @@ a.octobo-email {
 
 .octobo-presskit {
   display: block;
-  padding: 0.8em 2em;
+  padding: 0.5em 1.5em;
   background-color: #73d0da;
   color: white; }
 
@@ -396,7 +404,7 @@ footer {
     margin: 0.1em; }
 
   .octobo-menu li {
-    padding-left: 2.4em;
+    padding-left: 1.2em;
     font-size: 0.8em; }
 
   .octobo-hero {
@@ -412,6 +420,9 @@ footer {
 
   .octobo-quote {
     margin: 5rem 2rem 0rem; }
+
+  .octobo-quote p {
+    height: 6em; }
 
   .octobo-event a, .octobo-event p {
     display: table-cell;
