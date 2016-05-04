@@ -1,575 +1,263 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>OCTOBO</title>
-		<meta name="description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook. By Yuting Su" />
-		<meta name="keywords" content="interactive plush, alternate controller, storytelling, children's game, interactive toy, innovative gameplay" />
-		<meta name="creator" content="Yuting Su" />
-		<!-- Bootstrap -->
-		<script src="js/modernizr.custom.js"></script>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/jquery.fancybox.css" rel="stylesheet">
-		<link href="css/flickity.css" rel="stylesheet" >
-		<link href="css/animate.css" rel="stylesheet">
-		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-		<link href="css/styles.css" rel="stylesheet">
-		<link href="css/queries.css" rel="stylesheet">
-		<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-		<!-- Facebook and Twitter integration -->
-		<meta property="og:title" content="OCTOBO: The Interactive Storytelling Plush Octopus"/>
-		<meta property="og:image" content="http://playoctobo.com/images/images/OCTOBO_PLAY2.jpg"/>
-		<meta property="og:url" content="http://playoctobo.com/"/>
-		<meta property="og:site_name" content="OCTOBO"/>
-		<meta property="og:description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook."/>
-		<meta property="fb:app_id" content="1701808540056589"/>
-		<meta name="twitter:title" content="OCTOBO: The Interactive Storytelling Plush Octopus" />
-		<meta name="twitter:image" content="http://playoctobo.com/images/images/OCTOBO_PLAY2.jpg" />
-		<meta name="twitter:url" content="http://playoctobo.com/" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@playoctobo" />
-		<meta name="twitter:description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook." />
-
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<!--[if lt IE 7]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-		<!-- open/close -->
-		<header>
-			<section class="hero">
-				<div class="texture-overlay"></div>
-				<div class="container">
-					<div class="row nav-wrapper">
-						<div class="col-md-6 col-sm-6 col-xs-6 text-left">
-							<a href="#"><img src="img/OCTOBO_logo.png" alt="Boxify Logo"></a>
-						</div>
-						<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-							<!--<p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>-->
-							<a href="press.html" class="press-btn animated fadeInUp" >Press Kit</a>
-						</div>
-					</div>
-					<div class="row hero-content">
-						<div class="col-md-12">
-							<h1 class="animated fadeInDown">The Interactive Storytelling Plush Octopus.</h1>
-							<h2 class="animated fadeInDown">Sign up for our mailing list!</h2>
-							<!--<a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Use it for free</a> <a href="#about" class="learn-btn animated fadeInUp">Learn more <i class="fa fa-arrow-down"></i></a>-->
-							<!-- Begin MailChimp Signup Form -->
-
-							<style type="text/css">
-								#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-								#mc_embed_signup form{
-									text-align: left;}
-								#mc_embed_signup .button{   display: inline-block;
-									margin: 0 10px 10px 0;
-									padding: 0px 50px;
-									border-radius: 3px;
-									background-color: #fff;
-									color: #4b98a9;
-									font-size: 16px;
-									height:58px;}
-								#mc_embed_signup .button:hover, .button:focus{background-color: #73d0da;
-									color: #fff;
-									text-decoration: none;}
-								#mc_embed_signup input.email{
-									height:58px;
-									weight:300px;
-									margin:0 10px 0 0 ;
-								}
-							</style>
-							<div id="mc_embed_signup" class="animated fadeInUp">
-								<form action="//playoctobo.us12.list-manage.com/subscribe/post?u=73a85c8d2b11a53ff2b6a691a&amp;id=906254525e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-									<div id="mc_embed_signup_scroll">
-
-										<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-										<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-										<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_73a85c8d2b11a53ff2b6a691a_906254525e" tabindex="-1" value=""></div>
-										<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-										<a href="#features" class="learn-btn ">Learn more <i class="fa fa-arrow-down"></i></a>
-									</div>
-								</form>
-							</div>
-
-							<!--End mc_embed_signup-->
-						</div>
-					</div>
-				</div>
-			</section>
-		</header>
-		<section class="features-list" id="features">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="col-md-4 wp2 text-center">
-							<img src="img/altctrlgdc.jpg">
-						</div>
-						<div class="col-md-8 wp2">
-							<h1>alt.ctrl.GDC 2016!</h1>
-							<p>OCTOBO was selected to be showcased at GDC (Game Developers Conference) in San Francisco in  March 2016!</p>
-							<p>We were at alt.ctrl.GDC, the on-site exhibition for alternative control schemes and interactions in games. The respond to the show was fantastic!  </p>
-
-						</div>
-
-						<!--<div class="col-md-4 feature-1 wp2">-->
-						<!--<div class="feature-icon">-->
-						<!--<i class="fa fa-desktop"></i>-->
-						<!--</div>-->
-						<!--<div class="feature-content">-->
-						<!--<h1>Responsive</h1>-->
-						<!--<p>Built using HTML5/CSS3 and jQuery, and built using one of the world's most powerful CSS frameworks available, Bootstrap.</p>-->
-						<!--<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>-->
-						<!--</div>-->
-						<!--</div>-->
-						<!--<div class="col-md-4 feature-2 wp2 delay-05s">-->
-						<!--<div class="feature-icon">-->
-						<!--<i class="fa fa-flash"></i>-->
-						<!--</div>-->
-						<!--<div class="feature-content">-->
-						<!--<h1>Multi-Purpose</h1>-->
-						<!--<p>Perfect if you run your own start-up, product or service. Boxify can showcase your business converting your visits to income.</p>-->
-						<!--<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>-->
-						<!--</div>-->
-						<!--</div>-->
-						<!--<div class="col-md-4 feature-3 wp2 delay-1s">-->
-						<!--<div class="feature-icon">-->
-						<!--<i class="fa fa-heart"></i>-->
-						<!--</div>-->
-						<!--<div class="feature-content">-->
-						<!--<h1>Absolutely Free</h1>-->
-						<!--<p>As aways, download Boxify for free exclusively from Codrops. If you love Boxify and want to thank me, simply <a href="http://peterfinlan.com/">buy me a beer</a>. </p>-->
-						<!--<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i class="fa fa-chevron-circle-right"></i></a>-->
-						<!--</div>-->
-						<!--</div>-->
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="features-intro">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-6 nopadding features-intro-img">
-						<div class="features-bg">
-							<div></div>
-							<!--<div class="features-img wp1">-->
-								<!--<img src="img/html5-logo.png" alt="HTML5 Logo">-->
-							<!--</div>-->
-						</div>
-					</div>
-					<div class="col-md-6 nopadding">
-						<div class="features-slider">
-								<ul class="slides" >
-									<li>
-										<!--<h1>The Fore-front of Design &amp; Technology</h1>-->
-										<h1>OCTOBO makes family storytime soft, cuddly, and magical again. </h1>
-										<p>OCTOBO is a reactive plush octopus toy that comes
-											with a storybook. As parents and children read the
-											book together, they discover what OCTOBO wants,
-											give him things they find in the book, interact with
-											OCTOBO, and see him respond to them. </p>
-											<p>He has a tablet display on his head and soft sensors
-											throughout his body.</p>
-										<!--<p><a href="#features" class="arrow-btn">Find out why this freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>-->
-									</li>
-									<!--<li>-->
-										<!--<h1>Multi-Purpose User Centric Design</h1>-->
-										<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
-										<!--<p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>-->
-									<!--</li>-->
-									<!--<li>-->
-										<!--<h1>Made with Love, Released for Free</h1>-->
-										<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
-										<!--<p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>-->
-									<!--</li>-->
-								</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="video" id="about">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<h1><i class="fa fa-play-circle-o"></i> Watch the Video!</a></h1>
-						<div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/hdQ2dtPioe4" frameborder="0" allowfullscreen></iframe></div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="showcase">
-			<div class="showcase-wrap">
-				<div class="texture-overlay"></div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<!--<div class="device wp3">-->
-								<!--<div class="device-content">-->
-									<!--<div class="showcase-slider">-->
-										<!--<ul class="slides" id="showcaseSlider">-->
-											<!--<li>-->
-												<!--<img src="img/screen1.jpg" alt="Device Content Image">-->
-											<!--</li>-->
-											<!--<li>-->
-												<!--<img src="img/screen2.jpg" alt="Device Content Image">-->
-											<!--</li>-->
-											<!--<li>-->
-												<!--<img src="img/screen3.jpg" alt="Device Content Image">-->
-											<!--</li>-->
-										<!--</ul>-->
-									<!--</div>-->
-								<!--</div>-->
-							<!--</div>-->
-						</div>
-						<div class="col-md-6">
-							<!--<h1>Showcase your Product or Service</h1>-->
-							<h1>OCTOBO</h1>
-							<p>- Interactive plush that combines seamlessly with tablet</p>
-							<p>- OCTOBO responds to touch and storybook pieces </p>
-							<p>- Fun for the whole family!</p>
-							<p>- New stories available on the app store</p>
-							
-							<!--<blockquote class="team-quote">-->
-								<!--<div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>-->
-								<!--<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc." - Peter Finlan</p>-->
-								<!--<div class="logo-quote">-->
-									<!--<a href="http://tympanus.net/codrops/"><img src="img/codrops-logo.png" alt="Codrops Logo"></a>-->
-								<!--</div>-->
-							<!--</blockquote>-->
-							<!--<a href="http://tympanus.net/codrops/?p=22554" class="download-btn">Download! <i class="fa fa-download"></i></a>-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="screenshots-intro">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1 align="center">Screenshots</h1>
-						<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
-						<!--<p><a href="#screenshots" class="arrow-btn">See the screenshots! <i class="fa fa-long-arrow-right"></i></a></p>-->
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="screenshots" id="screenshots">
-			<div class="container-fluid">
-				<div class="row">
-					<ul class="grid">
-						<li>
-							<figure>
-								<img src="img/01-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/01.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li>
-							<figure>
-								<img src="img/02-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/02.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li>
-							<figure>
-								<img src="img/03-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/03.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li>
-							<figure>
-								<img src="img/04-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/04.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</div>
-				<div class="row">
-					<ul class="grid">
-						<li>
-							<figure>
-								<img src="img/05-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/05.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li>
-							<figure>
-								<img src="img/06-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/06.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li>
-							<figure>
-								<img src="img/07-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/07.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li>
-							<figure>
-								<img src="img/08-screenshot.jpg" alt="Screenshot 01">
-								<figcaption>
-								<div class="caption-content">
-									<a href="img/large/08.jpg" class="single_image">
-										<i class="fa fa-search"></i><br>
-									</a>
-								</div>
-								</figcaption>
-							</figure>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-		<section id="team">
-			<div class="container">
-				<div class="row">
-					<div class="heading text-center col-sm-8 col-sm-offset-2 wp3" >
-						<h1>The Team</h1>
-						<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>-->
-					</div>
-				</div>
-				<div class="team-members">
-					<div class="row">
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="http://suyuting.com" target="_blank"><img class="img-responsive" src="img/team/1.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Yuting Su</h3>
-									<h4>Team Lead, Creative Director</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="http://jceipek.com" target="_blank"><img class="img-responsive" src="img/team/2.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Julian Ceipek</h3>
-									<h4>Game Designer, Tech Director</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="http://luxianlx.com" target="_blank"><img class="img-responsive" src="img/team/3.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Xian Lu</h3>
-									<h4>Game Designer, Multimedia Designer</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="https://www.behance.net/liwen_lin"><img class="img-responsive" src="img/team/4.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Liwen Lin</h3>
-									<h4>Illustrator</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="row" >
-						<div class="col-sm-3 wp3" >
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="http://www.jacquesbrautbar.com/" target="_blank"><img class="img-responsive" src="img/team/5.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Jacques Brautbar</h3>
-									<h4>Composer</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="http://namicomposer.com/"><img class="img-responsive" src="img/team/6.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Nami Melumed</h3>
-									<h4>Composer</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="mailto:shademan.exe@gmail.com"><img class="img-responsive" src="img/team/7.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Justin Bortnick</h3>
-									<h4>Writer</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-						<div class="col-sm-3 wp3">
-							<div class="team-member " >
-								<div class="member-image">
-									<a href="mailto:vnlin@hotmail.com"><img class="img-responsive" src="img/team/8.jpg" alt=""></a>
-								</div>
-								<div class="member-info">
-									<h3>Vivian Lin</h3>
-									<h4>Crafting Consultant</h4>
-									<!--<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>-->
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/#team-->
-
-
-		<section class="contact" id="contact">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center wp4">
-						<h1>Contact Us </h1>
-						<!--<a href="mailto:playoctobo@gmail.com" class="download-btn">Contact Us! </a>-->
-						<ul>
-							<li><i class="fa fa-envelope"></i> playoctobo@gmail.com</li>
-							<li><i class="fa fa-twitter"></i> @playoctobo</li>
-							<li><i class="fa fa-facebook-square"></i> www.facebook.com/octobo</li>
-							<li><i class="fa fa-tag"></i> #octobo</li>
-						</ul>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5">
-						<h1 class="footer-logo">
-						<img src="img/OCTOBO_logo_color.jpg" alt="Footer Logo Blue">
-						</h1>
-						<p>© OCTOBO 2016 -  All rights reserved</p>
-					</div>
-					<div class="col-md-7">
-						<ul class="footer-nav">
-							<li><a href="#about">About</a></li>
-							<li><a href="#features">Features</a></li>
-							<li><a href="#screenshots">Screenshots</a></li>
-							<li><a href="#team">Team</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<div class="overlay overlay-boxify">
-			<nav>
-				<ul>
-					<li><a href="#about"><i class="fa fa-heart"></i>About</a></li>
-					<li><a href="#features"><i class="fa fa-flash"></i>Features</a></li>
-				</ul>
-				<ul>
-					<li><a href="#screenshots"><i class="fa fa-desktop"></i>Screenshots</a></li>
-					<li><a href="#team"><i class="fa fa-users"></i>Team</a></li>
-				</ul>
-			</nav>
-		</div>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="js/min/toucheffects-min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/flickity.pkgd.min.js"></script>
-		<script src="js/jquery.fancybox.pack.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/retina.js"></script>
-		<script src="js/waypoints.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/min/scripts-min.js"></script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-74891515-1', 'auto');
-		  ga('send', 'pageview');
-		</script>
-	</body>
+<html lang="en">
+  <head>
+    <title>OCTOBO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook. By Yuting Su">
+    <meta name="keywords" content="interactive plush, alternate controller, storytelling, children's game, interactive toy, innovative gameplay">
+    <meta name="creator" content="Yuting Su">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="OCTOBO: The Interactive Storytelling Plush Octopus">
+    <meta property="og:image" content="http://playoctobo.com/images/integrations/OCTOBO_Play.jpg">
+    <meta property="og:url" content="http://playoctobo.com/">
+    <meta property="og:site_name" content="OCTOBO">
+    <meta property="og:description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook.">
+    <meta property="fb:app_id" content="1701808540056589">
+    <meta name="twitter:title" content="OCTOBO: The Interactive Storytelling Plush Octopus">
+    <meta name="twitter:image" content="http://playoctobo.com/images/integrations/OCTOBO_Play.jpg">
+    <meta name="twitter:url" content="http://playoctobo.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@playoctobo">
+    <meta name="twitter:description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook.">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"><!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css"><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css"><!--<![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="header">
+      <div class="octobo-menu-wrapper pure-menu pure-menu-horizontal pure-menu-fixed">
+        <div class="octobo-menu"><a href="#" class="pure-menu-heading"><img src="images/logos/octobo.png" alt="Octobo Logo"></a>
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#about" class="pure-menu-link">ABOUT</a></li>
+            <li class="pure-menu-item"><a href="#video" class="pure-menu-link">VIDEO</a></li>
+            <li class="pure-menu-item"><a href="#contact" class="pure-menu-link">CONTACT</a></li>
+            <li class="pure-menu-item hide-on-mobile"><a href="http://playoctobo.com/press" class="pure-button pure-menu-link octobo-presskit">PRESS</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1 octobo-hero">
+        <div class="octobo-hero-overlay">
+          <div class="octobo-about">
+            <h1>Meet OCTOBO</h1>
+            <p>
+              Your Interactive Plush Octopus Companion
+              
+            </p>
+            <form action="//playoctobo.us12.list-manage.com/subscribe/post?u=73a85c8d2b11a53ff2b6a691a&amp;amp;id=906254525e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="pure-form octobo-signup validate">
+              <fieldset>
+                <div class="octobo-signup-item">
+                  <input type="email" value="" name="EMAIL" placeholder="me@email.com" required class="octobo-signup-item-email">
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_73a85c8d2b11a53ff2b6a691a_906254525e" tabindex="-1" value="" class="pure-u-1"/>
+                </div>
+                <div class="octobo-signup-item">
+                  <input type="submit" value="Keep me updated!" name="subscribe" id="mc-embedded-subscribe" class="pure-button pure-button-primary">
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="event-wrapper">
+      <div class="pure-g event-container"><a href="http://www.gdconf.com/news/heres_the_game_lineup_for_gdc_.html" class="octobo-event pure-u-1"><img src="images/logos/altctrlgdc.jpg" class="rounded-icon">
+          <p>
+            OCTOBO was selected for the alternate controller showcase at the 2016 Game Developers Conference, the world's largest professional game industry event!
+            
+          </p></a></div>
+    </div>
+    <div class="pure-g octobo-intro">
+      <div class="pure-u-1 pure-u-md-1-2 octobo-feature-image"></div>
+      <div class="pure-u-1 pure-u-md-1-2 octobo-intro-description-wrapper">
+        <div class="octobo-feature-blurb">
+          <h2>OCTOBO makes family storytime soft, cuddly, and magical again.</h2>
+          <p>OCTOBO is a reactive plush octopus toy that comes with a storybook. As parents and children read the book together, they discover what OCTOBO wants, give him things they find in the book, interact with OCTOBO, and see him respond to them.</p>
+          <p>
+            He has a tablet display on his head and soft sensors throughout his body.
+            
+            
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="meet-octobo">
+      <div class="pure-g octobo-callout-row">
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="octobo-callout"><img src="images/callouts/ipad.png" class="pure-img">
+            <h3>Tablet</h3>
+            <p>OCTOBO uses the same tablet you and your kids are already playing with!</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="octobo-callout"><img src="images/callouts/plush.png" class="pure-img">
+            <h3>Plush</h3>
+            <p>At heart, OCTOBO is a soft, cuddly plush stuffed with soft sensors that let him react to you.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-3">
+          <div class="octobo-callout"><img src="images/callouts/book.png" class="pure-img">
+            <h3>Book</h3>
+            <p>
+              OCTOBO's storybooks make family storytime more interactive, with magical goodies from OCTOBO's world.
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="video" class="octobo-video-wrapper">
+      <div class="pure-g">
+        <div class="pure-u-1-1 pure-u-md-1-1 octobo-video">
+          <div class="video-wrapper">
+            <iframe width="1920" height="1080" src="https://www.youtube.com/embed/hdQ2dtPioe4?modestbranding=0&amp;showinfo=0&amp;rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="octobo-quotes-wrapper">
+      <div class="octobo-quotes-container pure-g">
+        <div class="pure-u-1-1 pure-u-md-1-3">
+          <blockquote class="octobo-quote"><a href="http://www.zam.com/article/262/a-strategy-game-played-on-a-sewing-machine-check-out-these-bizarre-controllers-from-gdc">
+              <p>&ldquo;&hellip;to physically play with and hug a stuffed animal, and have it react to [you] is incredible&rdquo;</p>
+              <cite><img src="images/logos/zam.png" alt="Zam" class="pure-img"></cite></a></blockquote>
+        </div>
+        <div class="pure-u-1-1 pure-u-md-1-3">
+          <blockquote class="octobo-quote"><a href="http://www.gamasutra.com/view/news/268346/Yuting_Sus_Octobo_A_21st_Century_Teddy_Ruxpin.php">
+              <p>&ldquo;&hellip;a swarm of octopodes [will] make their way into toy stores around the world&rdquo;</p>
+              <cite><img src="images/logos/gamasutra.png" alt="Gamasutra" class="pure-img"></cite></a></blockquote>
+        </div>
+        <div class="pure-u-1-1 pure-u-md-1-3">
+          <blockquote class="octobo-quote"><a href="http://gdt.stanford.edu/what-can-an-octopus-teach-us-about-emotion/">
+              <p>&ldquo;&hellip;direct interaction [with Octobo&hellip;] might have the greatest potential for a true emotional and empathetic experience&rdquo;</p>
+              <cite><img src="images/logos/standford.png" alt="Stanford" class="pure-img"></cite></a></blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="team-container">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <h2 id="team">
+            Team OCTOBO
+            
+          </h2>
+        </div>
+        <ul class="team-list">
+                <li class="team-person"><a href="http://suyuting.com/"><img src="images/team/1.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Yuting Su</h3>
+                      <ul>
+                        <li>Team Lead</li>
+                        <li>Creative Director</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="http://jceipek.com/"><img src="images/team/2.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Julian Ceipek</h3>
+                      <ul>
+                        <li>Game Designer</li>
+                        <li>Tech Director</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="http://luxianlx.com/"><img src="images/team/3.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Xian Lu</h3>
+                      <ul>
+                        <li>Game Designer</li>
+                        <li>Multimedia Designer</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="https://www.behance.net/liwen_lin"><img src="images/team/4.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Liwen Lin</h3>
+                      <ul>
+                        <li>Illustrator</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="http://www.jacquesbrautbar.com/"><img src="images/team/5.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Jacques Brautbar</h3>
+                      <ul>
+                        <li>Composer</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="http://namicomposer.com/"><img src="images/team/6.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Nami Melumed</h3>
+                      <ul>
+                        <li>Composer</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="mailto:shademan.exe@gmail.com"><img src="images/team/7.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Justin Bortnick</h3>
+                      <ul>
+                        <li>Writer</li>
+                      </ul>
+                    </div></a></li>
+                <li class="team-person"><a href="mailto:vnlin@hotmail.com"><img src="images/team/8.jpg" class="pure-img">
+                    <div class="team-person-description">
+                      <h3>Vivian Lin</h3>
+                      <ul>
+                        <li>Crafting Consultant</li>
+                      </ul>
+                    </div></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="octobo-contact-container">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <h2 id="contact">Contact Us</h2>
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <div class="contact-options"><a href="http://playoctobo.com/press" class="octobo-presskit-contact pure-button">
+              Presskit
+              </a>
+            <ul class="contact-list">
+              <li class="contact-item"><a href="mailto:playoctobo@gmail.com" title="email"><span aria-hidden="true" class="fa fa-envelope"></span></a></li>
+              <li class="contact-item"><a href="https://twitter.com/playoctobo" title="twitter"><span aria-hidden="true" class="fa fa-twitter-square"></span></a></li>
+              <li class="contact-item"><a href="http://facebook.com/octobo" title="facebook"><span aria-hidden="true" class="fa fa-facebook-official"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>&copy; Team Octobo, 2016</footer>
+    <script src="main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-74891515-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
