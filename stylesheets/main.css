@@ -67,7 +67,7 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   display: none !important; }
 
 .octobo-hero {
-  background: url(images/hero.jpg);
+  background: url(/images/hero.jpg);
   background-position: top;
   background-size: cover;
   height: 45rem;
@@ -162,7 +162,7 @@ a.octobo-event:hover {
 
 .octobo-feature-image {
   min-height: 27rem;
-  background: no-repeat center right url(images/features-intro.jpg);
+  background: no-repeat center right url(/images/features-intro.jpg);
   background-size: cover; }
 
 .octobo-feature-blurb {
@@ -197,7 +197,7 @@ a.octobo-event:hover {
   align-items: flex-end; }
 
 .octobo-quotes-wrapper {
-  background: url(images/quote.jpg);
+  background: url(/images/quote.jpg);
   background-size: cover; }
 
 .octobo-quote {
