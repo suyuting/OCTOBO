@@ -80,6 +80,17 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
   display: flex;
   align-items: center; }
 
+.octobo-recognition {
+  position: absolute;
+  top: 4rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
+
+.octobo-recognition img {
+  padding: 0rem 1.5rem; }
+
 .octobo-about {
   text-align: center;
   color: white;
