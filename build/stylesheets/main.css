@@ -136,6 +136,22 @@ html, button, input, select, textarea, .pure-g, .pure-g [class*="pure-u"] {
 .event-wrapper {
   background-color: white; }
 
+.news-appearances {
+  background-color: #333333;
+  text-align: center;
+  margin: 0;
+  padding: 1rem; }
+
+.news-appearances li {
+  list-style: none;
+  display: inline-block; }
+
+.news-item {
+  padding: 1rem; }
+
+.news-item img {
+  height: 2.5rem; }
+
 .octobo-event {
   height: 18rem;
   padding: 1rem;

@@ -1,6 +1,7 @@
 - var googleAnalyticsId = 'UA-74891515-1'
 
-- var presskitLink = "http://playoctobo.com/press"
+//- // - var presskitLink = "http://playoctobo.com/press"
+- var presskitLink = "press.html"
 
 - var team = [ { image: 1, name: "Yuting Su", site: "http://suyuting.com/", roles: ["Team Lead", "Creative Director"] } ]
 - team.push( { image: 2, name: "Julian Ceipek", site: "http://jceipek.com/", roles: ["Game Designer", "Tech Director"] } )
@@ -11,6 +12,13 @@
 - team.push( { image: 7, name: "Justin Bortnick", site: "mailto:shademan.exe@gmail.com", roles: ["Writer"] } )
 - team.push( { image: 8, name: "Vivian Lin", site: "mailto:vnlin@hotmail.com", roles: ["Crafting Consultant"] } )
 
+- var news = []
+- news.push( { source: "Apple Insider", image: "apple_insider.png", link: "http://appleinsider.com/articles/16/06/17/e3-2016-octobo-plush-toy-uses-ipad-for-interactive-storybook-experience" } )
+- news.push( { source: "Engadget", image: "engadget.svg", link: "https://www.youtube.com/watch?v=ysyoTaPJQXc&feature=youtu.be&t=158" } )
+- news.push( { source: "TechCrunch", image: "tech_crunch.png", link: "https://techcrunch.com/2016/06/20/indie-developers-ditch-controllers-for-real-life-interactions/" } )
+- news.push( { source: "Gamasutra", image: "gamasutra.png", link: "http://www.gamasutra.com/view/news/268346/Yuting_Sus_Octobo_A_21st_Century_Teddy_Ruxpin.php" } )
+- news.push( { source: "巴哈姆特 - Bahamut", image: "bahamut.png", link: "http://gnn.gamer.com.tw/6/133176.html"} )
+
 mixin botProtection()
   div(style="position: absolute; left: -5000px;", aria-hidden="true")
     input.pure-u-1(type="text", name="b_73a85c8d2b11a53ff2b6a691a_906254525e", tabindex="-1", value="")
@@ -20,6 +28,8 @@ doctype html
 html(lang="en")
   head
     title="OCTOBO"
+    meta(charset='utf-8')
+    meta(http-equiv='content-type', content='text/html; charset=UTF-8')
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description", content="OCTOBO is a reactive plush octopus toy that comes with a storybook. By Yuting Su")
@@ -123,6 +133,12 @@ html(lang="en")
     //-       img.rounded-icon(src="images/logos/altctrlgdc.jpg")
     //-       p.
     //-         OCTOBO was selected for the alternate controller showcase at the 2016 Game Developers Conference, the world's largest professional game industry event!
+
+    ul.news-appearances
+      each news_item in news
+        li
+          a.news-item(href="#{news_item.link}", target="_blank")
+            img(src="images/logos/news/white/#{news_item.image}", alt="#{news_item.source}") 
 
     .pure-g.octobo-intro
       .pure-u-1.pure-u-md-1-2.octobo-feature-image
@@ -243,5 +259,7 @@ html(lang="en")
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '#{googleAnalyticsId}', 'auto');
-      ga('send', 'pageview');
+      if (location.hostname !== 'localhost') {
+        ga('create', '#{googleAnalyticsId}', 'auto');
+        ga('send', 'pageview');
+      }
