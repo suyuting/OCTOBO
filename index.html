@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <title>OCTOBO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="OCTOBO is a reactive plush octopus toy that comes with a storybook. By Yuting Su">
@@ -52,7 +54,7 @@
             <li class="pure-menu-item"><a href="#about" class="pure-menu-link">ABOUT</a></li>
             <li class="pure-menu-item"><a href="#video" class="pure-menu-link">VIDEO</a></li>
             <li class="pure-menu-item"><a href="#contact" class="pure-menu-link">CONTACT</a></li>
-            <li class="pure-menu-item hide-on-mobile"><a href="http://playoctobo.com/press" class="pure-button pure-menu-link octobo-presskit">PRESS</a></li>
+            <li class="pure-menu-item hide-on-mobile"><a href="press.html" class="pure-button pure-menu-link octobo-presskit">PRESS</a></li>
           </ul>
         </div>
       </div>
@@ -85,6 +87,15 @@
               </fieldset>
             </form>
           </div>
+        </div>
+        <div class="news-appearances-container"> 
+          <ul class="news-appearances">
+            <li><a href="http://appleinsider.com/articles/16/06/17/e3-2016-octobo-plush-toy-uses-ipad-for-interactive-storybook-experience" target="_blank" class="news-item"><img src="images/logos/news/white/apple_insider.png" alt="Apple Insider"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=ysyoTaPJQXc&amp;feature=youtu.be&amp;t=158" target="_blank" class="news-item"><img src="images/logos/news/white/engadget.svg" alt="Engadget"></a></li>
+            <li><a href="https://techcrunch.com/2016/06/20/indie-developers-ditch-controllers-for-real-life-interactions/" target="_blank" class="news-item"><img src="images/logos/news/white/tech_crunch.png" alt="TechCrunch"></a></li>
+            <li><a href="http://www.gamasutra.com/view/news/268346/Yuting_Sus_Octobo_A_21st_Century_Teddy_Ruxpin.php" target="_blank" class="news-item"><img src="images/logos/news/white/gamasutra.png" alt="Gamasutra"></a></li>
+            <li><a href="http://gnn.gamer.com.tw/6/133176.html" target="_blank" class="news-item"><img src="images/logos/news/white/bahamut.png" alt="巴哈姆特 - Bahamut"></a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -234,7 +245,7 @@
       </div>
       <div class="pure-g">
         <div class="pure-u-1">
-          <div class="contact-options"><a href="http://playoctobo.com/press" class="octobo-presskit-contact pure-button">
+          <div class="contact-options"><a href="press.html" class="octobo-presskit-contact pure-button">
               Presskit
               </a>
             <ul class="contact-list">
@@ -254,8 +265,10 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       
-      ga('create', 'UA-74891515-1', 'auto');
-      ga('send', 'pageview');
+      if (location.hostname !== 'localhost') {
+        ga('create', 'UA-74891515-1', 'auto');
+        ga('send', 'pageview');
+      }
     </script>
   </body>
 </html>
