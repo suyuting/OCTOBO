@@ -204,22 +204,29 @@ html, button, input, select, textarea, .pure-g, .pure-g [class *= "pure-u"]
 .event-wrapper
   background-color: #fff
 
+.news-appearances-container
+  margin: auto
+  max-width: 75rem
+  position: relative
+  bottom: 5rem
+  height: 4.5rem
+
 .news-appearances
-  background-color: #333
+  padding: 0
   text-align: center
-  margin: 0
-  padding: 1rem
+  width: 100%
+  white-space: nowrap
+  display: table
 
 .news-appearances li
   list-style: none
-  display: inline-block
-
-.news-item
-  padding: 1rem
+  vertical-align: middle
+  display: table-cell
+  padding: 0 0.3rem
 
 .news-item img
-  height: 2.5rem
-  // width: 10rem
+  max-width: 100%
+  max-height: 2.5rem
 
 .octobo-event
   height: 18rem
@@ -572,7 +579,7 @@ footer
     height: 50rem
 
   .octobo-about
-    padding-top: 25rem
+    padding-top: 17rem
     font-size: 1.5rem
 
   .octobo-quotes-wrapper
