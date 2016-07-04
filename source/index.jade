@@ -18,6 +18,8 @@
 - news.push( { source: "Gamasutra", image: "gamasutra.png", link: "http://www.gamasutra.com/view/news/268346/Yuting_Sus_Octobo_A_21st_Century_Teddy_Ruxpin.php" } )
 - news.push( { source: "巴哈姆特 - Bahamut", image: "bahamut.png", link: "http://gnn.gamer.com.tw/6/133176.html"} )
 
+- var featured_youtube_id = "ViaXhBMREZw"
+
 mixin botProtection()
   div(style="position: absolute; left: -5000px;", aria-hidden="true")
     input.pure-u-1(type="text", name="b_73a85c8d2b11a53ff2b6a691a_906254525e", tabindex="-1", value="")
@@ -183,7 +185,7 @@ html(lang="en")
       .pure-g
         .pure-u-1-1.pure-u-md-1-1.octobo-video
           .video-wrapper
-            iframe(width="1920", height="1080", src="https://www.youtube.com/embed/PSkuN-OJUFc?modestbranding=0&showinfo=0&rel=0" frameborder="0", allowfullscreen)
+            iframe(width="1920", height="1080", src="https://www.youtube.com/embed/#{featured_youtube_id}?modestbranding=0&showinfo=0&rel=0" frameborder="0", allowfullscreen)
 
     .octobo-quotes-wrapper
       .octobo-quotes-container.pure-g
